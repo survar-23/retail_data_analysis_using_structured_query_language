@@ -1,2 +1,2 @@
 # retail_data_analysis_using_structured_query_language
-In this repository, we delve into the world of retail by analyzing point of sale (POS) data to gain insights into customer behavior. Our analysis revolves around three core tables: Customer, Transactions, and Product Category
+In this repository, we delve into the world of retail by analyzing point of sale (POS) data to gain insights into customer behavior. Our analysis revolves around three core tables: Customer, Transactions, and Product Category. We leverage Structured Query Language (SQL) to unlock valuable information from this retail store data. Explore our SQL scripts to uncover customer trends, transaction patterns, and product categorization within the retail landscape.
