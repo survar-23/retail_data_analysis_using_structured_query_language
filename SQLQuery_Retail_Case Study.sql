@@ -1,5 +1,5 @@
 
-SELECT * FROM Customer; --View entire customer table all rows
+SELECT * FROM Customer; --View entire customer table with all rows
 SELECT * FROM Transactions; --View entire transaction table all rows
 SELECT * FROM prod_cat_info; --View entire prod_cat_info table all rows
 
@@ -24,7 +24,7 @@ WHERE Qty<0;
 --Already converted the date datatype in date while uploading
 
 
---4:What si the time range of the transactions data available for analysis? Show the output in number of days,months, years simultaneously in different columns. 
+--4:What is the time range of the transactions data available for analysis? Show the output in number of days,months, years simultaneously in different columns. 
 SELECT DATEDIFF(DAY, MIN(tran_date), MAX(tran_date)) as [Days],        --finding day difference using min date and max date
 DATEDIFF(MONTH, MIN(tran_date), MAX(tran_date)) as Months,             --finding month difference using min date and max date
 DATEDIFF(YEAR, MIN(tran_date), MAX(tran_date)) as Years                --finding year difference using min date and max date
@@ -50,13 +50,13 @@ ORDER BY [Channel Count] desc
 --2: What is the count of Male and Female customers in the database?
 SELECT Gender, Count(Gender) as Total FROM Customer
 WHERE GENDER in ('M', 'F')                                               
-GROUP BY Gender
+GROUP BY Gender;
 
 
 --3: From which city do we have the maximum number of customers and how many?
 SELECT TOP 1 city_code, COUNT(customer_Id) as Total FROM Customer
 GROUP BY city_code
-ORDER BY Total desc
+ORDER BY Total desc;
 
 
 --4: How many sub-categories are there under the Books Category?
@@ -68,7 +68,7 @@ WHERE prod_cat='Books'
 SELECT Qty FROM (SELECT Top 1 Qty, COUNT(Qty) as Total FROM Transactions
 GROUP BY Qty
 ORDER BY Qty desc
-) as t
+) as t;
 
 
 --6: What is net total revenue generated in categories Electronics and Books?
